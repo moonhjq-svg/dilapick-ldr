@@ -85,7 +85,7 @@ The four models were trained independently, with shared encoder/context definiti
 Linear retains the shallow detail branch and replaces only deep context recovery;
 Narrow has width 3 and is a complete alternative configuration.
 
-The repository is prepared locally; no public URL is asserted. MIT applies to
+Repository: https://github.com/moonhjq-svg/dilapick-ldr. MIT applies to
 author-owned code under [LICENSE](LICENSE); dataset rights and external dependencies
 are described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

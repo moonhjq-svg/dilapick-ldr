@@ -1,5 +1,9 @@
 # Publishing this prepared release
 
+Repository: https://github.com/moonhjq-svg/dilapick-ldr
+Release scope: frozen-checkpoint inference and Table I rescoring; full retraining
+has not been independently verified in a clean environment.
+
 Upload this directory or its complete ZIP to the chosen permanent repository.
 No server credentials, waveforms, optimizer caches, Jetson engines or manuscript
 source are required. Keep `weights/`, `data/`, `configs/`, `evidence/`, and
