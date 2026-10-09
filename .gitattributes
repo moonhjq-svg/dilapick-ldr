@@ -1,0 +1,2 @@
+# Frozen evidence and SHA256 manifests require byte-identical checkouts on every OS.
+* -text
