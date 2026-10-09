@@ -1,0 +1,245 @@
+{
+  "status": "PASS",
+  "isolation": "Separate copy outside source tree; venv without system-site-packages; PYTHONPATH unset; PYTHONNOUSERSITE=1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "versions": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]\ntorch 2.5.1+cpu\nnumpy 1.26.4\n",
+  "inference_checkpoints": 12,
+  "table_cells": 32,
+  "full_retraining": "NOT_VERIFIED",
+  "synthetic_inference_only": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "reproduce_table.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"table\": \"Table I: recovery strategies\", \"matched_mean_sd_cells\": 32, \"models\": 4, \"seeds\": [41, 42, 43], \"predictions_per_model_seed\": 10000, \"reference_arrivals\": \"round original metadata; 100 Hz; tolerance 50 samples\", \"other_tables\": \"not recomputed by this minimal release\", \"training_rerun\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "DilaPick",
+        "--seed",
+        "41",
+        "--output",
+        "outputs/DilaPick_41.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"DilaPick\", \"seed\": 41, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 52491, \"thresholds\": {\"detection\": 0.9, \"p\": 0.2, \"s\": 0.25}, \"output\": \"outputs\\\\DilaPick_41.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "DilaPick",
+        "--seed",
+        "42",
+        "--output",
+        "outputs/DilaPick_42.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"DilaPick\", \"seed\": 42, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 52491, \"thresholds\": {\"detection\": 0.95, \"p\": 0.4, \"s\": 0.2}, \"output\": \"outputs\\\\DilaPick_42.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "DilaPick",
+        "--seed",
+        "43",
+        "--output",
+        "outputs/DilaPick_43.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"DilaPick\", \"seed\": 43, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 52491, \"thresholds\": {\"detection\": 0.9, \"p\": 0.35, \"s\": 0.15}, \"output\": \"outputs\\\\DilaPick_43.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "LDR",
+        "--seed",
+        "41",
+        "--output",
+        "outputs/LDR_41.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"LDR\", \"seed\": 41, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 43356, \"thresholds\": {\"detection\": 0.9, \"p\": 0.25, \"s\": 0.2}, \"output\": \"outputs\\\\LDR_41.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "LDR",
+        "--seed",
+        "42",
+        "--output",
+        "outputs/LDR_42.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"LDR\", \"seed\": 42, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 43356, \"thresholds\": {\"detection\": 0.95, \"p\": 0.2, \"s\": 0.2}, \"output\": \"outputs\\\\LDR_42.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "LDR",
+        "--seed",
+        "43",
+        "--output",
+        "outputs/LDR_43.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"LDR\", \"seed\": 43, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 43356, \"thresholds\": {\"detection\": 0.9, \"p\": 0.2, \"s\": 0.15}, \"output\": \"outputs\\\\LDR_43.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Linear",
+        "--seed",
+        "41",
+        "--output",
+        "outputs/Linear_41.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Linear\", \"seed\": 41, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42327, \"thresholds\": {\"detection\": 0.9, \"p\": 0.15, \"s\": 0.15}, \"output\": \"outputs\\\\Linear_41.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Linear",
+        "--seed",
+        "42",
+        "--output",
+        "outputs/Linear_42.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Linear\", \"seed\": 42, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42327, \"thresholds\": {\"detection\": 0.95, \"p\": 0.25, \"s\": 0.2}, \"output\": \"outputs\\\\Linear_42.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Linear",
+        "--seed",
+        "43",
+        "--output",
+        "outputs/Linear_43.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Linear\", \"seed\": 43, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42327, \"thresholds\": {\"detection\": 0.95, \"p\": 0.15, \"s\": 0.15}, \"output\": \"outputs\\\\Linear_43.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Narrow",
+        "--seed",
+        "41",
+        "--output",
+        "outputs/Narrow_41.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Narrow\", \"seed\": 41, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42324, \"thresholds\": {\"detection\": 0.95, \"p\": 0.35, \"s\": 0.2}, \"output\": \"outputs\\\\Narrow_41.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Narrow",
+        "--seed",
+        "42",
+        "--output",
+        "outputs/Narrow_42.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Narrow\", \"seed\": 42, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42324, \"thresholds\": {\"detection\": 0.9, \"p\": 0.35, \"s\": 0.1}, \"output\": \"outputs\\\\Narrow_42.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--model",
+        "Narrow",
+        "--seed",
+        "43",
+        "--output",
+        "outputs/Narrow_43.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"Narrow\", \"seed\": 43, \"synthetic_input\": true, \"shape\": [1, 3, 6000], \"parameters\": 42324, \"thresholds\": {\"detection\": 0.95, \"p\": 0.2, \"s\": 0.2}, \"output\": \"outputs\\\\Narrow_43.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-c",
+        "import numpy as np; x=np.arange(18000,dtype=np.float32).reshape(6000,3); np.save('outputs/input.npy',x)"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "infer.py",
+        "--input",
+        "outputs/input.npy",
+        "--output",
+        "outputs/custom.npz"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"model\": \"LDR\", \"seed\": 42, \"synthetic_input\": false, \"shape\": [1, 3, 6000], \"parameters\": 43356, \"thresholds\": {\"detection\": 0.95, \"p\": 0.2, \"s\": 0.2}, \"output\": \"outputs\\\\custom.npz\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-c",
+        "import torch,numpy,sys; print(sys.version); print('torch',torch.__version__); print('numpy',numpy.__version__)"
+      ],
+      "returncode": 0,
+      "stdout": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]\ntorch 2.5.1+cpu\nnumpy 1.26.4\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "returncode": 0,
+      "stdout": "filelock==4.0.12\nfsspec==2026.9.0\nJinja2==3.1.6\nMarkupSafe==3.0.4\nmpmath==1.3.0\nnetworkx==3.4.2\nnumpy==1.26.4\nsympy==1.13.1\ntorch @ file:///C:/Users/huang/AppData/Local/Temp/pip-unpack-4ia4syga/torch-2.5.1%2Bcpu-cp310-cp310-win_amd64.whl#sha256=df93157482b672892d29134d3fae9d38ba3219702faedd79f407eb36774c56ce\ntyping_extensions==4.16.0\n",
+      "stderr": ""
+    }
+  ]
+}

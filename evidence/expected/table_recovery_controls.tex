@@ -1,0 +1,10 @@
+\begin{table*}[t]\centering\small
+\caption{STEAD test performance of recovery strategies (seeds 41--43; mean $\pm$ sample SD).}\label{tab:recovery}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr@{}}\toprule Model & D F1 & P F1 & S F1 & P/S mean F1\\\midrule
+DilaPick & $0.998668\pm0.000115$ & $0.985627\pm0.000557$ & $0.965034\pm0.000639$ & $0.975331\pm0.000516$\\
+LDR & $0.999068\pm0.000321$ & $0.986400\pm0.000399$ & $0.963572\pm0.000930$ & $0.974986\pm0.000600$\\
+Linear & $0.999400\pm0.000173$ & $0.984798\pm0.000355$ & $0.965208\pm0.000479$ & $0.975003\pm0.000287$\\
+Narrow & $0.997606\pm0.001048$ & $0.983616\pm0.001890$ & $0.958249\pm0.007781$ & $0.970933\pm0.004835$\\
+\bottomrule\end{tabular*}\par\vspace{3pt}
+\parbox{\textwidth}{\footnotesize Linear and Narrow use 42,327/42,324 parameters and 44.298M/44.856M Conv1d MACs, versus 43,356 and 45.054M for LDR. Differences concern complete configurations.}\end{table*}

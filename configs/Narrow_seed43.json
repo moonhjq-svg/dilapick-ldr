@@ -1,0 +1,11 @@
+{
+  "model": "Narrow",
+  "seed": 43,
+  "thresholds": {
+    "detection": 0.95,
+    "p": 0.2,
+    "s": 0.2
+  },
+  "weights": "weights/Narrow_seed43.pt",
+  "prediction": "evidence/predictions/Narrow_seed43.csv"
+}

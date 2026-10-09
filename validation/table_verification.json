@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "table": "Table I: recovery strategies",
+  "matched_mean_sd_cells": 32,
+  "models": 4,
+  "seeds": [
+    41,
+    42,
+    43
+  ],
+  "predictions_per_model_seed": 10000,
+  "reference_arrivals": "round original metadata; 100 Hz; tolerance 50 samples",
+  "other_tables": "not recomputed by this minimal release",
+  "training_rerun": false
+}

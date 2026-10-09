@@ -1,0 +1,11 @@
+{
+  "model": "Linear",
+  "seed": 41,
+  "thresholds": {
+    "detection": 0.9,
+    "p": 0.15,
+    "s": 0.15
+  },
+  "weights": "weights/Linear_seed41.pt",
+  "prediction": "evidence/predictions/Linear_seed41.csv"
+}

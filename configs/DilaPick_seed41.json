@@ -1,0 +1,11 @@
+{
+  "model": "DilaPick",
+  "seed": 41,
+  "thresholds": {
+    "detection": 0.9,
+    "p": 0.2,
+    "s": 0.25
+  },
+  "weights": "weights/DilaPick_seed41.pt",
+  "prediction": "evidence/predictions/DilaPick_seed41.csv"
+}

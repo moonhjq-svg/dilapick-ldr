@@ -1,0 +1,146 @@
+{
+  "status": "FROZEN_BEFORE_NEW_TRAINING",
+  "created_utc": "2026-09-16T12:06:24.575817+00:00",
+  "purpose": "Post-hoc explanatory recovery controls; not a prospective held-out confirmation or replacement decision.",
+  "variants": [
+    "LINEAR_CONTEXT",
+    "NARROW_FEATURE"
+  ],
+  "seeds": [
+    41,
+    42,
+    43
+  ],
+  "new_runs": 6,
+  "narrow_width": 3,
+  "width_rule": "Minimum absolute Core-MAC distance to frozen LDR over uniform integer widths 3..16; tie: smaller width. No data/accuracy used.",
+  "architecture": {
+    "LINEAR_CONTEXT": "Change only context _Projection1D(48,24)+shuffle8 into _Projection1D(48,3)+linear interpolate6000, align_corners=False. Preserve shallow branch and local correction.",
+    "NARROW_FEATURE": "Three nearest-upsample feature recovery stages T/4,T/2,T with projected encoder skips and original residual-block types; uniform width selected by Core MACs alone; no extra LDR branches.",
+    "encoder_and_context": "Original component definitions and same-seed initial values; all model weights trained independently, no freezing or pretrained initialization.",
+    "historical_E4": "Read-only historical comparison; different refinement/head/auxiliary design, not a direct main-path control. No new E4 seeds or INSTANCE reruns."
+  },
+  "complexity": {
+    "LDR": {
+      "parameters": 43356,
+      "core_macs": 45054000
+    },
+    "LINEAR_CONTEXT": {
+      "parameters": 42327,
+      "core_macs": 44298000
+    },
+    "NARROW_FEATURE": {
+      "parameters": 42324,
+      "core_macs": 44856000
+    }
+  },
+  "data": {
+    "index": "results/public_benchmark_restart/stead_50k_50k_index.csv",
+    "index_sha256": "322760be43d0d901472fde2b8165e5bc94acc392f4eafbc647a76303c9440ef9",
+    "waveforms": "datasets/STEAD_seisbench_mirror/waveforms.hdf5",
+    "validation_order_sha256": "64f8f0bc84bd8f7b6e4c2dc51d7d05a5891a7b2845cc0f3b6296231b456ac41b",
+    "train_count": 80000,
+    "validation_count": 10000,
+    "allowed_waveform_splits": [
+      "train",
+      "val"
+    ],
+    "test_waveforms_allowed": false,
+    "master_index_metadata_read_for_hash_and_split_check": true
+  },
+  "training": {
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 2,
+    "precision": "FP32",
+    "tf32": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "augmentation": false,
+    "loss": "Original equal-mean D/P/S BCEWithLogits",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false
+    },
+    "scheduler": {
+      "name": "CosineAnnealingLR",
+      "T_max": 20,
+      "eta_min": 1e-05
+    },
+    "gradient_clip": 1.0,
+    "threshold_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "threshold_selection": "Validation F1, recall, smaller threshold",
+    "checkpoint_selection": "Validation D/P/S mean F1, then P/S mean F1, S recall, lower loss, earlier epoch; exact existing lexicographic rank",
+    "data_order": "Separate loader generators seeded with the matched training seed, as in frozen LDR runner"
+  },
+  "references": {
+    "validation_gate": "experiments/public_benchmark_restart/dilapick_ldr/three_seed_validation_gate.json",
+    "validation_gate_sha256": "88fbe24c3b58729c12c02c370ba8ef7669a0b51228ac4a936f5c905eb3a18497",
+    "LDR_checkpoints_retrained": false
+  },
+  "analysis": {
+    "primary": "D/P/S F1, P/S mean F1, precision, recall, FP/FN at original 0.5s tolerance",
+    "secondary": "Per-model conditional MAE plus paired common-TP error distributions and success/miss composition; report all seeds and all variants",
+    "cost": "Core Conv1d MACs and parameters; later same-run CPU forward timing of all three frozen seed42 models",
+    "bootstrap": {
+      "replicates": 10000,
+      "random_seed": 20260916,
+      "unit": "source event; trace ID fallback",
+      "interval": "95% percentile; paired controls versus LDR"
+    },
+    "claims": "No predefined requirement that LDR wins; preserve losing or mixed outcomes.",
+    "heldout_test": "Not run in this study; no automated promotion to test/INSTANCE"
+  },
+  "stop_rules": [
+    "Stop on nonfinite values, source/identity mismatch, data-split mismatch, or failed execution integrity.",
+    "Do not drop a completed seed or add variants/seeds to reverse an unfavorable outcome.",
+    "No automatic restart/overwrite of an incomplete run; inspect failures first."
+  ],
+  "gpu": {
+    "exclude_physical_indices": [
+      1
+    ],
+    "selection": "Inspect live usage and choose one idle GPU from 0/2/3; never kill unrelated jobs."
+  },
+  "source_hashes": {
+    "scripts/public_benchmark/audit_recovery_controls.py": "03e16e4dd16616534e3647cd84390552336a1731ceffb38258116c2aad3a1c05",
+    "scripts/public_benchmark/models/dilapick_recovery_controls.py": "ac9f291628731b6769610535b653e72020a16e7dd5b76184ef31672d88fd7319",
+    "scripts/public_benchmark/models/dilapick_ldr.py": "33e4911052c8e59b81608b6ba316b728dc8475ef57792198be565575bd7e8991",
+    "scripts/public_benchmark/models/ab_lightweight_joint_picker.py": "05af83dee9edb83207f77865742877cb67008ebbd8111d2b520f8981328a6d22",
+    "scripts/public_benchmark/run_recovery_controls.py": "805b6b445f478c5eed351be0a3a0976e39190d7f70308f88f8bcdf526209c4d5",
+    "scripts/public_benchmark/train_dilapick_ldr_seed42.py": "9dc6ed657485879387f0d896fe21c3d195b45f93c6ed4da4d9d058cfd26c381a",
+    "scripts/public_benchmark/train_ab_lightweight_joint_picker_stage_b.py": "4b458c3e5c65a9b7e2bd329ce7224ee6215b398a2e1aa6374845449dba46b476",
+    "scripts/public_benchmark/models/bw1_2x2_mechanism_ablation.py": "90dae55083bcc9a4bf372429ffab89e71d6745c634dcdf53af76be976ae0089f",
+    "scripts/public_benchmark/data/stead_multitask_dataset.py": "690d38070d21a146fd7bcc9854bb30fe4326d0e01d5eb7781a7673fe3cdd87a2",
+    "scripts/public_benchmark/data/label_generator.py": "3721be2d7d6bd5b762924df5daca68c12221fef6dce5c67840f2ccd55d3eb9df",
+    "scripts/public_benchmark/train_stead_formal_single_seed_v0.py": "c4acd8497f85b237dd0bb334c316589ca9a2728a6314b1a4f769591fc605df29"
+  },
+  "structural_audit_sha256": "beb09ae2aeb4503b33b4c9060302174830d971432c5f4b8b4f899187c6a21bcd"
+}

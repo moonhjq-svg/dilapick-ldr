@@ -1,0 +1,56 @@
+{
+  "status": "POST_HOC_FROZEN_TEST_RESCORING",
+  "tolerances_s": [
+    0.05,
+    0.1,
+    0.2,
+    0.5
+  ],
+  "sampling_hz": 100,
+  "seeds": [
+    41,
+    42,
+    43
+  ],
+  "threshold_selection": false,
+  "checkpoint_selection": false,
+  "training": false,
+  "common_tp": "pairwise intersection of correct picks at original 0.5 s; equal-seed averages",
+  "reference_arrivals": "int(round(original metadata arrival sample)) for all four models; original DilaPick CSV used truncation; original files preserved",
+  "source_sensitivity": "all original test noise plus event records whose source_id is absent from training and validation; no station-disjoint claim",
+  "input_checks": "original frozen index SHA256; exact ordered test IDs; label availability and original integer policy verified against metadata; baseline prediction hashes match original metrics",
+  "split_audit": {
+    "index_sha256": "322760be43d0d901472fde2b8165e5bc94acc392f4eafbc647a76303c9440ef9",
+    "record_unique": true,
+    "sampling_seed": 20260630,
+    "split_unit": "record, stratified by event/noise",
+    "counts": {
+      "train": {
+        "event": 40000,
+        "noise": 40000
+      },
+      "val": {
+        "event": 5000,
+        "noise": 5000
+      },
+      "test": {
+        "event": 5000,
+        "noise": 5000
+      }
+    },
+    "event_counts": {
+      "train": 37453,
+      "val": 4957,
+      "test": 4955
+    },
+    "event_intersections": {
+      "train__val": 640,
+      "train__test": 545,
+      "val__test": 89
+    },
+    "test_event_records_with_training_source": 556,
+    "test_event_records_with_training_or_validation_source": 615,
+    "missing_event_source_ids": 0,
+    "waveform_content_duplicates": "not assessed; trace-identity disjointness is not waveform-byte disjointness"
+  }
+}

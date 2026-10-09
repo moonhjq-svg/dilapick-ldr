@@ -1,0 +1,10 @@
+filelock==4.0.12
+fsspec==2026.9.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+mpmath==1.3.0
+networkx==3.4.2
+numpy==1.26.4
+sympy==1.13.1
+torch @ file:///C:/Users/huang/AppData/Local/Temp/pip-unpack-4ia4syga/torch-2.5.1%2Bcpu-cp310-cp310-win_amd64.whl#sha256=df93157482b672892d29134d3fae9d38ba3219702faedd79f407eb36774c56ce
+typing_extensions==4.16.0

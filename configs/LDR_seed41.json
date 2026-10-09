@@ -1,0 +1,11 @@
+{
+  "model": "LDR",
+  "seed": 41,
+  "thresholds": {
+    "detection": 0.9,
+    "p": 0.25,
+    "s": 0.2
+  },
+  "weights": "weights/LDR_seed41.pt",
+  "prediction": "evidence/predictions/LDR_seed41.csv"
+}

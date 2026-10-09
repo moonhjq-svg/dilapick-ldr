@@ -1,0 +1,311 @@
+[
+  {
+    "path": "scripts/public_benchmark/models/ab_lightweight_joint_picker.py",
+    "sha256": "05af83dee9edb83207f77865742877cb67008ebbd8111d2b520f8981328a6d22",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/models/ab_lightweight_joint_picker.py"
+  },
+  {
+    "path": "scripts/public_benchmark/models/bw1_2x2_mechanism_ablation.py",
+    "sha256": "90dae55083bcc9a4bf372429ffab89e71d6745c634dcdf53af76be976ae0089f",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/models/bw1_2x2_mechanism_ablation.py"
+  },
+  {
+    "path": "scripts/public_benchmark/models/dilapick_ldr.py",
+    "sha256": "33e4911052c8e59b81608b6ba316b728dc8475ef57792198be565575bd7e8991",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/models/dilapick_ldr.py"
+  },
+  {
+    "path": "scripts/public_benchmark/models/dilapick_recovery_controls.py",
+    "sha256": "ac9f291628731b6769610535b653e72020a16e7dd5b76184ef31672d88fd7319",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/models/dilapick_recovery_controls.py"
+  },
+  {
+    "path": "scripts/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "package marker"
+  },
+  {
+    "path": "scripts/public_benchmark/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "package marker"
+  },
+  {
+    "path": "scripts/public_benchmark/models/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "package marker"
+  },
+  {
+    "path": "weights/DilaPick_seed41.pt",
+    "sha256": "79061d49c4016c86ca7de41fe736a6b160916b4640f3c6a8133ccf70750b88f1",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/bw1_2x2_mechanism_ablation_seed41/M10/best_checkpoint.pt",
+    "original_checkpoint_sha256": "71634d5ec9698a285163c4d61398baa2facc512d647edde73a65432e261aa195",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/DilaPick_seed41.csv",
+    "sha256": "0b0fe035f7dd7b4044f65243b64c20a6988137811cc11d7816794bee9f55d2c9",
+    "source": "audits/reviewer_resolution_20260924/DilaPick_seed41_predictions.csv"
+  },
+  {
+    "path": "configs/DilaPick_seed41.json",
+    "sha256": "96adee9c3dab943525c0d3ea25a82f372324649c1fdc3e903d69fb554be8f1ee",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/DilaPick_seed42.pt",
+    "sha256": "0d273fbdc43a5ed8afcf9a4cf0e36866b51bda5f81f68cb168cb3397e2d49b0f",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/m10_final_candidate_seed42/best_checkpoint.pt",
+    "original_checkpoint_sha256": "efd57c07a760bbaf893d83cc7d5605e46cdd0914bf56691fb3af77e9d49eacce",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/DilaPick_seed42.csv",
+    "sha256": "ab0e86ce9e1a0b2adebc108aff13e0fc7521cb65b168453bc2fb65943daa972d",
+    "source": "audits/reviewer_resolution_20260924/DilaPick_seed42_predictions.csv"
+  },
+  {
+    "path": "configs/DilaPick_seed42.json",
+    "sha256": "dbcf6e6a842104ee2f55003971bfa5fc87d2a6d44f7dbdc91c85e59625013d17",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/DilaPick_seed43.pt",
+    "sha256": "28de33a366cd3cea0927cbb89ff0db794b94c10bf46e654bcc159832fa17396d",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/m10_final_candidate_seed43/best_checkpoint.pt",
+    "original_checkpoint_sha256": "fb64f651e279fb08a8d86e16b501513017fd257078b5bfff856b2cd2834d00c5",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/DilaPick_seed43.csv",
+    "sha256": "cf7e3ac7ed3bb52722c06a32f4685400c54d9800808b181f2470e8bd57afd14f",
+    "source": "audits/reviewer_resolution_20260924/DilaPick_seed43_predictions.csv"
+  },
+  {
+    "path": "configs/DilaPick_seed43.json",
+    "sha256": "02410c54760269ce0ba3ffac431726c0226c6ab2971f020524b6c5fb4cce286a",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/LDR_seed41.pt",
+    "sha256": "5daa1c55ea0199f4568cd7df5cc3ffc2bc0958ca3a57b2c217cd1c3b0dac1b0f",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/dilapick_ldr/stability_seed41/best_checkpoint.pt",
+    "original_checkpoint_sha256": "071b8f1fbe82ef3ffdaea92c7eb3a449f7da8be637156b10bf849dc4d0f68a41",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/LDR_seed41.csv",
+    "sha256": "f524eb4f30b1a8a419b2c70fbceed04e78fa362453c260f9224d7d3b6ecd90a9",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/seed41_test_predictions_full_precision.csv"
+  },
+  {
+    "path": "configs/LDR_seed41.json",
+    "sha256": "7e6c1268743d946f565da02a84780aa691a80c41b3aeffb9822107420c99fd39",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/LDR_seed42.pt",
+    "sha256": "62f6103a831cac7c45357a20f40d92f94acf3aed10744fdc3caf86c31efe754e",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/dilapick_ldr/seed42/best_checkpoint.pt",
+    "original_checkpoint_sha256": "fca3aa7c7c0c02ddc903a20bb27158b1245e63123278a500412a1a08e3b47817",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/LDR_seed42.csv",
+    "sha256": "0d38d67748a511035ec259ec620bd2a5c550c9c7e0b136cb109ce3b2c8f65d48",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/seed42_test_predictions_full_precision.csv"
+  },
+  {
+    "path": "configs/LDR_seed42.json",
+    "sha256": "0ae604fb36e9e964db7acc82d8cf4868d35bfce608d64eb6bf5e062627b4463c",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/LDR_seed43.pt",
+    "sha256": "fbc21d8cc08737821757c6aacb6d1f88550f7eb30fab55dc5bfd1e7a81a7d250",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/dilapick_ldr/stability_seed43/best_checkpoint.pt",
+    "original_checkpoint_sha256": "6bf7e27eeab1a0a1e0cb767d951d459105d550bb2f35b0d05d85d44e66e0129c",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/LDR_seed43.csv",
+    "sha256": "1cac46d82006be2ccee496826362dc88e5c6f5798d14db0d890a15b7453c1279",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/seed43_test_predictions_full_precision.csv"
+  },
+  {
+    "path": "configs/LDR_seed43.json",
+    "sha256": "867dd728e32d07bd8cb232178dab51b61923910b6bf9ee592775da7261af924a",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Linear_seed41.pt",
+    "sha256": "41c16914f3bd2ea2d0b8ec1d722bc5aa5526c9b30b930369b2cd0e043bddf919",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/LINEAR_CONTEXT/seed41/best_checkpoint.pt",
+    "original_checkpoint_sha256": "fb9d013170e294f8c01eaf5a0b84389ded85f6de4cf9eff7f11ddc81725df6fe",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Linear_seed41.csv",
+    "sha256": "2aa34d8f3a74ce0903d97406680800be57971d611d83e9504194bc121ae74721",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Linear_seed41_predictions.csv"
+  },
+  {
+    "path": "configs/Linear_seed41.json",
+    "sha256": "25d8d64b3b4c94bb0d1319d4040423c6f4537567cf0d8f076a98d7f413e199f1",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Linear_seed42.pt",
+    "sha256": "cb920beef4fdcf13384ca23f9f80674ac32b1efe29a7987414743e96b7da1deb",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/LINEAR_CONTEXT/seed42/best_checkpoint.pt",
+    "original_checkpoint_sha256": "e64c98934b4fb812fd4af6c56eb2ed08a55c44aba68eed0e6ecd1100d7fbb114",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Linear_seed42.csv",
+    "sha256": "818aff461073ecd870b95a36d3513adce9b7ee88cfa9374acfeb995fa8d4143b",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Linear_seed42_predictions.csv"
+  },
+  {
+    "path": "configs/Linear_seed42.json",
+    "sha256": "fbfc0ea7d4ea5cba995e3ae578495facf31cc22c35bd771262dba67d9cab5256",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Linear_seed43.pt",
+    "sha256": "b50420a799b55139c3ec6b6fb2e067b521d0af46eb1dad6640e0fa7f3687f7a5",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/LINEAR_CONTEXT/seed43/best_checkpoint.pt",
+    "original_checkpoint_sha256": "5fe72edd3cfbb1401a5b793aecb1a99bbb728b284e3a0ae91b87ff0c5465f68f",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Linear_seed43.csv",
+    "sha256": "2419cf528ad118b98f4a3b14336ed8288ee0c152f5bc65f8e4dd1ec084906a9d",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Linear_seed43_predictions.csv"
+  },
+  {
+    "path": "configs/Linear_seed43.json",
+    "sha256": "15486293c4c2e7cfbe08ff3859bfbd012ce48ceea1e4cd4da4e3f29f9d62f931",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Narrow_seed41.pt",
+    "sha256": "9748d09fe5fc43273f8e8c46bf898513d03fd99fdd0cb8b2e6b3502c72fc6c44",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/NARROW_FEATURE/seed41/best_checkpoint.pt",
+    "original_checkpoint_sha256": "04ef1abe5159d828fbb6a73f2d4f748750a81494465dd635160b6770e0e92f89",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Narrow_seed41.csv",
+    "sha256": "a9f0a84ef7102ab0ed5606e0ba813ab2d03070aedc813c2434ac5cbc93701ca7",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Narrow_seed41_predictions.csv"
+  },
+  {
+    "path": "configs/Narrow_seed41.json",
+    "sha256": "da1c027770cdfb026a6a5853288524cc94c10b98e69492951b32b7263c756eb7",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Narrow_seed42.pt",
+    "sha256": "e19168b4f1478830d5b05b83adb9428c5b99df7cbf3a2033ab648685dae4d0d7",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/NARROW_FEATURE/seed42/best_checkpoint.pt",
+    "original_checkpoint_sha256": "dd7f686ed77ea588b782046d62e9d5bba9feb178338f2bc0685af8f5e132b634",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Narrow_seed42.csv",
+    "sha256": "fec4150f8c7f86f664770dba79cb5918414983a2b6a576af1072daf60b049a16",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Narrow_seed42_predictions.csv"
+  },
+  {
+    "path": "configs/Narrow_seed42.json",
+    "sha256": "178cd9731e3acac87a2faf6d56711ed726e28e468d831068893c32fdcfa45d20",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "weights/Narrow_seed43.pt",
+    "sha256": "5f1259f6085b2438cb1ad53c8d5bda97313aa6042a40f27656dbed56e98f98e7",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:experiments/public_benchmark_restart/recovery_controls_20260916/runs/NARROW_FEATURE/seed43/best_checkpoint.pt",
+    "original_checkpoint_sha256": "142faca0f6f963dc9ed5aa2aaaab5b5611154af604a1247d2b362d9f2c716bce",
+    "transformation": "Tensor-only state_dict export; exact tensor equality verified; optimizer/training metadata excluded"
+  },
+  {
+    "path": "evidence/predictions/Narrow_seed43.csv",
+    "sha256": "b785790a16068016321ab3a7c82ca8c224c9c85dfe195d327545bd3736970f3d",
+    "source": "audits/teacher_revision_20260922/gate_b_controls/Narrow_seed43_predictions.csv"
+  },
+  {
+    "path": "configs/Narrow_seed43.json",
+    "sha256": "e51a71159f1eae168bc7626f4d2da8007e500c66eecf9366fa47a615b8b9530b",
+    "source": "assembled from frozen evidence"
+  },
+  {
+    "path": "data/stead_50k_50k_index.csv",
+    "sha256": "322760be43d0d901472fde2b8165e5bc94acc392f4eafbc647a76303c9440ef9",
+    "source": "audits/reviewer_resolution_20260924/stead_50k_50k_index.csv"
+  },
+  {
+    "path": "evidence/split_audit.json",
+    "sha256": "a8d3eae757e8930d327efe8ee5765463b3b4ea632dfc0dfe210fb11ba58c59e4",
+    "source": "audits/reviewer_resolution_20260924/split_audit.json"
+  },
+  {
+    "path": "configs/training_protocol_original.json",
+    "sha256": "30b16add4ec5ee0a5a0af4c10f514b256f50f72e42865199479b0630fc376186",
+    "source": "experiments/public_benchmark_restart/recovery_controls_20260916/protocol_lock.json"
+  },
+  {
+    "path": "evidence/expected/table_recovery_controls.tex",
+    "sha256": "9d20b59be792a10e127fca542ba17b98c1c6a40ada71e273509490f9c2793d9c",
+    "source": "grsl_ldr_v2_evidence_update/tables/table_recovery_controls.tex"
+  },
+  {
+    "path": "evidence/expected/fine_tolerance_summary.csv",
+    "sha256": "01d5ceb4cee0012a1f281cb5139ce5cde713b523c5eed932967588caef9f554b",
+    "source": "audits/reviewer_resolution_20260924/fine_tolerance_summary.csv"
+  },
+  {
+    "path": "evidence/expected/common_tp_per_seed.csv",
+    "sha256": "aa11e05bfd6198534d08e3e742239dba0adcbe764df6b8edd3d9986653ed7af1",
+    "source": "audits/reviewer_resolution_20260924/common_tp_per_seed.csv"
+  },
+  {
+    "path": "evidence/expected/analysis_protocol.json",
+    "sha256": "67c65674e72e9814eac5a26ab95c9480172951874bddc79051ccafee99721384",
+    "source": "audits/reviewer_resolution_20260924/analysis_protocol.json"
+  },
+  {
+    "path": "reference_training/train_dilapick_ldr_seed42.py",
+    "sha256": "9dc6ed657485879387f0d896fe21c3d195b45f93c6ed4da4d9d058cfd26c381a",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/train_dilapick_ldr_seed42.py"
+  },
+  {
+    "path": "reference_training/run_recovery_controls.py",
+    "sha256": "805b6b445f478c5eed351be0a3a0976e39190d7f70308f88f8bcdf526209c4d5",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/run_recovery_controls.py"
+  },
+  {
+    "path": "reference_training/train_ab_lightweight_joint_picker_stage_b.py",
+    "sha256": "4b458c3e5c65a9b7e2bd329ce7224ee6215b398a2e1aa6374845449dba46b476",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/train_ab_lightweight_joint_picker_stage_b.py"
+  },
+  {
+    "path": "reference_training/train_bw1_2x2_mechanism_ablation_seed41.py",
+    "sha256": "09952e98968850453a7d06e2e40d738158a72c9e77bf21c17f68651fc552db9b",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/train_bw1_2x2_mechanism_ablation_seed41.py"
+  },
+  {
+    "path": "reference_training/train_stead_formal_single_seed_v0.py",
+    "sha256": "c4acd8497f85b237dd0bb334c316589ca9a2728a6314b1a4f769591fc605df29",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/train_stead_formal_single_seed_v0.py"
+  },
+  {
+    "path": "reference_training/stead_multitask_dataset.py",
+    "sha256": "690d38070d21a146fd7bcc9854bb30fe4326d0e01d5eb7781a7673fe3cdd87a2",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/data/stead_multitask_dataset.py"
+  },
+  {
+    "path": "reference_training/label_generator.py",
+    "sha256": "3721be2d7d6bd5b762924df5daca68c12221fef6dce5c67840f2ccd55d3eb9df",
+    "source": "frozen_sources_checkpoints_v2.tar.gz:scripts/public_benchmark/data/label_generator.py"
+  }
+]

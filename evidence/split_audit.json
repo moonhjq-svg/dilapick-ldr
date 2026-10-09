@@ -1,0 +1,34 @@
+{
+  "index_sha256": "322760be43d0d901472fde2b8165e5bc94acc392f4eafbc647a76303c9440ef9",
+  "record_unique": true,
+  "sampling_seed": 20260630,
+  "split_unit": "record, stratified by event/noise",
+  "counts": {
+    "train": {
+      "event": 40000,
+      "noise": 40000
+    },
+    "val": {
+      "event": 5000,
+      "noise": 5000
+    },
+    "test": {
+      "event": 5000,
+      "noise": 5000
+    }
+  },
+  "event_counts": {
+    "train": 37453,
+    "val": 4957,
+    "test": 4955
+  },
+  "event_intersections": {
+    "train__val": 640,
+    "train__test": 545,
+    "val__test": 89
+  },
+  "test_event_records_with_training_source": 556,
+  "test_event_records_with_training_or_validation_source": 615,
+  "missing_event_source_ids": 0,
+  "waveform_content_duplicates": "not assessed; trace-identity disjointness is not waveform-byte disjointness"
+}
